@@ -1,7 +1,7 @@
 import { Game } from './pages/game.js';
 import { BingoCard } from './pages/bingoCard.js';
 import { Index } from './pages/index.js';
-import './app.css';
+import './css/app.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
