@@ -51,6 +51,15 @@ body {
 
 
 /* Index page */
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 2rem;
+}
 button.main {
     width: 40rem;
     font-size: var(--fs-600);
@@ -65,6 +74,15 @@ button.main {
 
 button.main:hover {
     background-color: #740811;
+}
+
+@media (max-width: 750px) {
+    button.main {
+        width: 100%;
+        font-size: var(--fs-500);
+        margin: 0;
+
+    }
 }
 
 /*Game page*/
@@ -240,6 +258,7 @@ main {
 
 .active-grid {
     background-color: var(--light-red);
+    color: rgba(0,0,0,0.6);
 }
 
 button.new-card {
@@ -282,5 +301,6 @@ button.new-card:hover {
   .bingo-card {
     min-width: 0;
     width: 20%;
-  }  
+  }
+  
 }
