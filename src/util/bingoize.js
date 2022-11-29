@@ -56,7 +56,11 @@ export const generateBingoCard = () => {
 export const displayGrid = (numberArray, onClick=null) => {
     return numberArray.map( num => {
         if (typeof num === 'string') {
-            return <p className='bingo-letter' id={num} key={num}>{num}</p>
+            if (num==='Free') {
+                return <p className='bingo-letter free' key={num}>{num}</p>
+            } else {
+                return <p className='bingo-letter' id={num} key={num}>{num}</p>
+            }
         } else {
             if (onClick) {
                 return <p className='bingo-number clickable' onClick={onClick} id={num} key={num}>{num}</p>

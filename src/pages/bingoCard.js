@@ -2,6 +2,9 @@ import React from "react";
 import { useNavigate } from 'react-router-dom'
 import { displayGrid, generateBingoCard } from "../util/bingoize.js";
 
+import { ReactComponent as SnowFlake1 } from '../ressources/svg/snowflake1.svg';
+import { ReactComponent as SnowFlake2 } from '../ressources/svg/snowflake2.svg';
+
 export const BingoCard = () => {
 
     const navigate = useNavigate();
@@ -15,13 +18,18 @@ export const BingoCard = () => {
     }
 
     return (
-        <div className='center-flex all-height flex-column'>
-            <div className='bingo-card'>
-            {
-                displayGrid(generateBingoCard(), onClick)
-            }
+        <>
+            <div className='bingo-card-container'>
+                <div className='bingo-card'>
+                {
+                    displayGrid(generateBingoCard(), onClick)
+                }
+                </div>
+                <button className='new-card' onClick={newCard}>nouvelle carte</button>
             </div>
-            <button className='new-card' onClick={newCard}>nouvelle carte</button>
-        </div>
+            <SnowFlake1 id='sf5'/>
+            <SnowFlake2 id='sf6'/>
+        </>
+        
     )
 }

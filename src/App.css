@@ -203,24 +203,39 @@ main {
 }
 
 /* card page */
+.bingo-card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
 .bingo-card {
     box-sizing: border-box;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(6, 1fr);
     grid-auto-flow: column;
-    width: 60%;
+    min-width: 60%;
     row-gap: 1rem;
     column-gap: 1rem;
 }
 
 .bingo-card > * {
+    min-width: 2.5rem;
+    aspect-ratio: 1;
     display: flex;
     font-size: 2rem;
     justify-content: center;
     align-items: center;
     border-radius: 25px;
     
+}
+
+.free {
+    background-color: var(--light-red);
+    font-size: 1rem;
 }
 
 .active-grid {
@@ -243,4 +258,29 @@ button.new-card {
 
 button.new-card:hover {
     background-color: #740811;
+}
+
+#sf5 {
+    width: 10rem;
+    height: 10rem;
+    position: absolute;
+    z-index: -100;
+    bottom: -3rem;
+    right: 1rem;
+}
+
+#sf6 {
+    width: 10rem;
+    height: 10rem;
+    position: absolute;
+    z-index: -100;
+    top: -2rem;
+    left: -1rem;
+}
+
+@media (min-width: 750px) {
+  .bingo-card {
+    min-width: 0;
+    width: 20%;
+  }  
 }
