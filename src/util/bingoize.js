@@ -33,9 +33,7 @@ const createBingoLine = (min, max) => {
             continue;
         }
     }
-    return bingoLine.sort((a,b) => {
-        return a-b;
-    })
+    return bingoLine
 }
 
 
@@ -43,11 +41,12 @@ const createBingoLine = (min, max) => {
 
 export const generateBingoCard = () => {
     let bingoCardArray = []
-    const bline = createBingoLine(1,15)
-    const iline = createBingoLine(16,30)
-    const nline = createBingoLine(31,45)
-    const gline = createBingoLine(46,60)
-    const oline = createBingoLine(61,75)
+    const bline = createBingoLine(1,15);
+    const iline = createBingoLine(16,30);
+    const nline = createBingoLine(31,45);
+    nline[2]='Free';
+    const gline = createBingoLine(46,60);
+    const oline = createBingoLine(61,75);
     bingoCardArray = ['B',...bline,'I',...iline,'N', ...nline,'G', ...gline,'O', ...oline]
     return bingoCardArray
     
