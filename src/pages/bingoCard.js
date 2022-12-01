@@ -20,7 +20,7 @@ export const BingoCard = () => {
     return (
         <>
             <div className='bingo-card-container'>
-                <div className='bingo-card'>
+                <div className='bingo-card transparentblue-bg'>
                 {
                     displayGrid(generateBingoCard(), onClick)
                 }

@@ -53,7 +53,7 @@ export const Game = () => {
       <NavBar numberSelection={drawNumber} currentNumber={currentNumber} renitialize={renitialize} />
       <main>
         <NumberDisplay currentNumber={currentNumber} />
-        <div className='grid-container'>
+        <div className='grid-container transparentblue-bg'>
           <BingoGrid />
         </div>
       </main>
