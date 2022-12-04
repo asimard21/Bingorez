@@ -188,6 +188,10 @@ main {
     color: white;
 }
 
+.bingo-letter:hover {
+    cursor: default;
+}
+
 .active {
     color: var(--accent-red);
     text-shadow: var(--accent-red) 4px 4px 10px;
